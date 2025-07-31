@@ -1,0 +1,17 @@
+.section-one {
+  display: flex;
+  align-items: center;
+  height: 90vh;
+
+  .sobre-one {
+    border: 2px solid var(--cor-secundaria);
+    border-radius: 5px;
+    padding: 50px;
+    p {
+      font-size: 18px;
+      text-align: justify;
+      color: var(--cor-fonte);
+    }
+  }
+
+}

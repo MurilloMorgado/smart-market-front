@@ -1,7 +1,10 @@
-footer {}
+footer {
+  .estilizacao {
+    border-top: 1px solid var(--cor-fonte);
+  }
+}
 
 .section-one {
-  border-top: 1px solid var(--cor-fonte);
 
   .footer-divisao {
     display: flex;
@@ -50,7 +53,11 @@ footer {}
 
           li {
             padding: 5px;
-            color: var(--cor-fonte);
+            cursor: pointer;
+
+            a {
+              color: var(--cor-fonte);
+            }
           }
         }
       }
@@ -63,7 +70,6 @@ footer {}
 .section-two {
   display: flex;
   justify-content: end;
-  border-top: 1px solid var(--cor-fonte);
 
   p {
     font-size: 14px;
