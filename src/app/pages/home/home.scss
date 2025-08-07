@@ -79,7 +79,12 @@
   justify-content: space-between;
   background: var(--cor-secundaria);
 
-  .section-three-div-one {}
+  .section-three-div-one {
+    max-width: 500px;
+    p{
+      text-align: justify;
+    }
+  }
 
   .section-three-div-two {
 
