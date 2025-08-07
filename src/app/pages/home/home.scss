@@ -89,3 +89,27 @@
     }
   }
 }
+
+.section-four {
+  padding: 20px 0;
+
+  .section-four-div-one {
+    margin-bottom: 15px;
+
+    h3 {
+      font-size: 24px;
+    }
+  }
+
+  .section-four-div-two {
+    .tabela-scroll {
+      max-height: 300px; // altura máxima com scroll vertical
+      overflow-y: auto;
+      overflow-x: auto; // para scroll horizontal se a tabela for larga
+    }
+
+    table {
+      min-width: 600px; // evita quebra em colunas pequenas
+    }
+  }
+}
