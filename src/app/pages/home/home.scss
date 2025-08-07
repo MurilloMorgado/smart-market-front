@@ -39,7 +39,7 @@
 }
 
 .section-two {
-  padding: 50px 0px;
+  padding: 100px 0px;
 
   .produto-destaque {
     display: flex;
@@ -74,9 +74,10 @@
 }
 
 .section-three {
-  padding: 50px 0px;
+  padding: 100px 0px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  background: var(--cor-secundaria);
 
   .section-three-div-one {}
 
@@ -91,7 +92,7 @@
 }
 
 .section-four {
-  padding: 20px 0;
+  padding: 100px 0;
 
   .section-four-div-one {
     margin-bottom: 15px;
@@ -102,14 +103,49 @@
   }
 
   .section-four-div-two {
+    border: 2px solid var(--cor-fonte);
+
     .tabela-scroll {
-      max-height: 300px; // altura máxima com scroll vertical
+      max-height: 500px;
       overflow-y: auto;
-      overflow-x: auto; // para scroll horizontal se a tabela for larga
+      overflow-x: auto;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: var(--cor-secundaria); // fundo da barra
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--cor-fonte); // cor da "bolinha" (thumb)
+        border-radius: 5px;
+        border: 2px solid var(--cor-secundaria); // espaço interno
+      }
+
+
     }
 
     table {
-      min-width: 600px; // evita quebra em colunas pequenas
+      min-width: 600px;
+      border-collapse: separate;
+      border-spacing: 0;
+
+      th,
+      td {
+        background: var(--cor-secundaria);
+
+      }
+    }
+
+    thead th {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: var(--cor-fonte);
+
     }
   }
 }
