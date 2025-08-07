@@ -1,7 +1,7 @@
 .section-one {
   position: relative;
   background-image: url('/supermercado2.png');
-  height: 400px;
+  height: 700px;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -25,6 +25,7 @@
     height: 100%;
 
     h1 {
+      font-size: 4rem;
       color: white;
     }
 
@@ -38,7 +39,7 @@
 }
 
 .section-two {
-  padding: 20px 0px;
+  padding: 50px 0px;
 
   .produto-destaque {
     display: flex;
@@ -66,10 +67,25 @@
       color: var(--cor-fonte);
       box-sizing: border-box;
 
-      img {
-
-      }
+      img {}
     }
 
+  }
+}
+
+.section-three {
+  padding: 50px 0px;
+  display: flex;
+  justify-content: space-evenly;
+
+  .section-three-div-one {}
+
+  .section-three-div-two {
+
+    img {
+      border-radius: 5px;
+      width: 500px;
+      height: 300px;
+    }
   }
 }

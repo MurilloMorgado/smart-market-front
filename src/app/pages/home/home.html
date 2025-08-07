@@ -16,7 +16,7 @@
       <button type="button" class="btn btn-outline-dark">Ver mais</button>
     </div>
 
-    <div class="divisao-card" >
+    <div class="divisao-card">
       <div class="card-body" *ngFor="let produto of produtoDestaque">
         <img src="/black-background.png" class="card-img-top" alt="...">
         <h5>{{produto.nome}}</h5>
@@ -27,9 +27,16 @@
   </section>
 
   <section class="container section-three">
-    <div>
-      
+
+    <div class="section-three-div-one">
+      <h4>Compara os preços dos produtos com o mês anterior.</h4>
+      <button type="button" class="btn btn-outline-dark">Comparar</button>
     </div>
+
+    <div class="section-three-div-two">
+      <img src="/comparar-preco.jpg" alt="">
+    </div>
+
   </section>
 </main>
 <app-footer></app-footer>
