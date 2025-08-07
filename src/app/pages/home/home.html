@@ -1,12 +1,35 @@
 <app-header></app-header>
-<main class="container">
+<main>
+
   <section class="section-one">
     <div class="divisao-one-apresentacao">
       <H1>Smart market</H1>
       <p>Seja bem-vindo ao Smart Market,sua plataforma de relatórios de compras personalizados</p>
-      <button>Saiba mais</button>
+      <button type="button" class="btn btn-outline-light">Saiba Mais</button>
     </div>
   </section>
-  <p>home works!</p>
+
+  <section class="container section-two">
+
+    <div class="produto-destaque">
+      <h2>Produtos mais comprados</h2>
+      <button type="button" class="btn btn-outline-dark">Ver mais</button>
+    </div>
+
+    <div class="divisao-card" >
+      <div class="card-body" *ngFor="let produto of produtoDestaque">
+        <img src="/black-background.png" class="card-img-top" alt="...">
+        <h5>{{produto.nome}}</h5>
+        <p class="card-text">{{produto.valor}}</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="container section-three">
+    <div>
+      
+    </div>
+  </section>
 </main>
 <app-footer></app-footer>

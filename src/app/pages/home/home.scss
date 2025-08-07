@@ -1,12 +1,10 @@
 .section-one {
   position: relative;
-  background-image: url('/supermercado.png');
+  background-image: url('/supermercado2.png');
   height: 400px;
   width: 100%;
   background-size: cover;
   background-position: center;
-  border: 3px solid var(--cor-secundaria);
-  margin: 20px;
 
   &::before {
     content: "";
@@ -33,6 +31,44 @@
     p {
       color: white;
 
+    }
+
+  }
+
+}
+
+.section-two {
+  padding: 20px 0px;
+
+  .produto-destaque {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+
+    h2 {
+      font-size: 32px;
+      color: var(--cor-fonte);
+    }
+  }
+
+  .divisao-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+    .card-body {
+      flex: 1 1 200px;
+      max-width: 250px;
+      padding: 5px;
+      border: 1px solid var(--cor-fonte);
+      color: var(--cor-fonte);
+      box-sizing: border-box;
+
+      img {
+
+      }
     }
 
   }
