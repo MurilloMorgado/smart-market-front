@@ -1,3 +1,12 @@
+.section-one {
+  margin-top: 100px;
+
+  .section-one-div-one {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .section-two {
   padding: 100px 0px;
 
@@ -27,7 +36,25 @@
       color: var(--cor-fonte);
       box-sizing: border-box;
 
-      img {}
+      .card-selecao {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .quantidade {
+          display: flex;
+          cursor: pointer;
+
+          p {
+            margin: 0;
+            padding: 0px 6px;
+          }
+        }
+
+        .botao {
+          padding: 2px 9px;
+        }
+      }
     }
 
   }

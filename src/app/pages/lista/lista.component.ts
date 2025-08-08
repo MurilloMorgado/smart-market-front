@@ -30,4 +30,14 @@ export class Lista implements OnInit {
     }
   }
 
+  removerUm(produto: string) {
+    console.log("removi um na quantidade :" + produto);
+  }
+  adicionarUm(produto: string) {
+    console.log("adicionei um na quantidade :" + produto);
+  }
+  adicionarProduto(produto: string) {
+    console.log("adicionei um produto :" + produto);
+  }
+
 }

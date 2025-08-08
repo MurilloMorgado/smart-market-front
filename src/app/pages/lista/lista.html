@@ -2,8 +2,9 @@
 <main>
 
   <section class="section-one">
-    <div class="container">
+    <div class="section-one-div-one container">
       <h2>Produtos</h2>
+      <button type="button" class="btn btn-outline-dark botao">Ver lista atual</button>
     </div>
   </section>
 
@@ -14,7 +15,17 @@
         <div class="card-body">
           <img src="/black-background.png" class="card-img-top" alt="...">
           <h5>{{ produto.nome }}</h5>
-          <p class="card-text">{{ produto.quantidade }}</p>
+          <div class="card-selecao">
+            <div class="quantidade">
+              <i class="bi bi-dash-circle-fill" (click)="removerUm(produto.nome)"></i>
+              <p class="card-text">{{ produto.quantidade }}</p>
+              <i class="bi bi-plus-circle-fill" (click)="removerUm(produto.nome)"></i>
+            </div>
+            <div>
+              <button type="button" class="btn btn-outline-dark botao"
+                (click)="adicionarProduto(produto.nome)">Adicionar</button>
+            </div>
+          </div>
         </div>
         }
       </div>
