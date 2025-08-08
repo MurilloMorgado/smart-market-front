@@ -26,7 +26,7 @@
               <i class="bi bi-plus-circle-fill" (click)="adicionarUm(produto.nome)"></i>
             </div>
             <div>
-              <button type="button" class="btn btn-outline-dark botao"
+              <button type="button" class="btn btn-outline-dark botao" id="liveToastBtn"
                 (click)="adicionarProduto(produto.nome)">Adicionar</button>
             </div>
           </div>
@@ -52,6 +52,6 @@
       <p>{{produto.quantidade}}</p>
     </div>
     }
-    <button>Importar Lista</button>
+    <button class="btn btn-outline-dark" (click)="gerarPDF()">Gerar PDF</button>
   </div>
 </div>

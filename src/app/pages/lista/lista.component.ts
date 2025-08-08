@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Footer } from "../../components/footer/footer.component";
 import { Header } from "../../components/header/header.component";
-import { first, firstValueFrom } from 'rxjs';
+import { firstValueFrom } from 'rxjs';
 import { Produto } from '../../model/produto';
 import { HttpClient } from '@angular/common/http';
+import { jsPDF } from 'jspdf';
 
 @Component({
   selector: 'app-lista',
@@ -64,6 +65,30 @@ export class Lista implements OnInit {
 
       }
     }
+  }
+
+  gerarPDF() {
+    const doc = new jsPDF();
+
+    // Cabeçalho
+    doc.setFontSize(16);
+    doc.text("Lista de Produtos", 20, 20);
+
+    // Títulos das colunas
+    doc.setFontSize(12);
+    doc.text("Nome do Produto", 20, 30);
+    doc.text("Quantidade", 150, 30);
+
+    // Adicionar produtos
+    let y = 40;  // Posição inicial
+    this.listaDeProdutos.forEach(produto => {
+      doc.text(produto.nome, 20, y);
+      doc.text(String(produto.quantidade), 150, y);
+      y += 10;  // Aumenta o valor de Y para a próxima linha
+    });
+
+    // Salvar o PDF
+    doc.save('lista_de_produtos.pdf');
   }
 
 }
