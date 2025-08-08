@@ -1,0 +1,22 @@
+[
+  { "nome": "Arroz", "quantidade": 1, "adicionar": false, "imagem": "black-background.png" },
+  { "nome": "Feijão", "quantidade": 1, "adicionar": false, "imagem": "black-background.png" },
+  { "nome": "Macarrão", "quantidade": 1, "adicionar": false, "imagem": "black-background.png" },
+  { "nome": "Óleo de soja", "quantidade": 1, "adicionar": false, "imagem": "black-background.png" },
+  { "nome": "Açúcar", "quantidade": 1, "adicionar": false, "imagem": "black-background.png" },
+  { "nome": "Sal", "quantidade": 1, "adicionar": false, "imagem": "black-background.png" },
+  { "nome": "Farinha de trigo", "quantidade": 1, "adicionar": false, "imagem": "black-background.png" },
+  { "nome": "Café", "quantidade": 1, "adicionar": false, "imagem": "black-background.png" },
+  { "nome": "Leite", "quantidade": 1, "adicionar": false, "imagem": "black-background.png" },
+  { "nome": "Margarina", "quantidade": 1, "adicionar": false, "imagem": "black-background.png" },
+  { "nome": "Detergente", "quantidade": 1, "adicionar": false, "imagem": "black-background.png" },
+  { "nome": "Sabão em pó", "quantidade": 1, "adicionar": false, "imagem": "black-background.png" },
+  { "nome": "Papel higiênico", "quantidade": 1, "adicionar": false, "imagem": "black-background.png" },
+  { "nome": "Escova de dentes", "quantidade": 1, "adicionar": false, "imagem": "black-background.png" },
+  { "nome": "Shampoo", "quantidade": 1, "adicionar": false, "imagem": "black-background.png" },
+  { "nome": "Condicionador", "quantidade": 1, "adicionar": false, "imagem": "black-background.png" },
+  { "nome": "Frango congelado", "quantidade": 1, "adicionar": false, "imagem": "black-background.png" },
+  { "nome": "Carne bovina", "quantidade": 1, "adicionar": false, "imagem": "black-background.png" },
+  { "nome": "Ovos", "quantidade": 1, "adicionar": false, "imagem": "black-background.png" },
+  { "nome": "Queijo", "quantidade": 1, "adicionar": false, "imagem": "black-background.png" }
+]
