@@ -47,8 +47,11 @@
   </div>
   <div class="offcanvas-body">
     @for (produto of listaDeCompraAtual; track produto){
-    <p>{{produto.nome}}</p>
-    <p>{{produto.quantidade}}</p>
+    <div class="lista-de-compra">
+      <p>{{produto.nome}}</p>
+      <p>{{produto.quantidade}}</p>
+    </div>
     }
+    <button>Importar Lista</button>
   </div>
 </div>
