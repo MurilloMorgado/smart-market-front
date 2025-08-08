@@ -15,6 +15,7 @@ import { HttpClient } from '@angular/common/http';
 export class Lista implements OnInit {
 
   listaDeProdutos: Produto[] = [];
+  listaDeCompraAtual: Produto[] = [];
 
   constructor(private http: HttpClient) { }
 
@@ -25,19 +26,45 @@ export class Lista implements OnInit {
   async carregarListaDeProdutos() {
     try {
       this.listaDeProdutos = await firstValueFrom(this.http.get<Produto[]>('data/listaDeProduto.json'));
+      console.log(this.listaDeProdutos);
     } catch (error) {
       console.log("Não foi possivel carregar a lista de produtos", error);
     }
   }
 
-  removerUm(produto: string) {
-    console.log("removi um na quantidade :" + produto);
+  removerUm(produtoNome: string): void {
+    const produto = this.listaDeProdutos.find(p => p.nome === produtoNome);
+    if (produto && produto.quantidade > 1) {
+      produto.quantidade--;
+      console.log(`Removi 1 do produto: ${produtoNome}, nova quantidade: ${produto.quantidade}`);
+    } else {
+      console.log(`A quantidade do produto ${produtoNome} não pode ser menor que 1.`);
+    }
   }
-  adicionarUm(produto: string) {
-    console.log("adicionei um na quantidade :" + produto);
+
+  adicionarUm(produtoNome: string): void {
+    const produto = this.listaDeProdutos.find(p => p.nome === produtoNome);
+    if (produto) {
+      produto.quantidade++;
+      console.log(`Adicionei 1 ao produto: ${produtoNome}, nova quantidade: ${produto.quantidade}`);
+    }
   }
-  adicionarProduto(produto: string) {
-    console.log("adicionei um produto :" + produto);
+
+  adicionarProduto(produtoNome: string): void {
+    const produto = this.listaDeProdutos.find(p => p.nome === produtoNome);
+
+    if (produto) {
+      const produtoNaLista = this.listaDeCompraAtual.find(p => p.nome === produtoNome);
+      if (produtoNaLista) {
+        produtoNaLista.quantidade++;
+        console.log(`Produto ${produtoNome} já estava na lista. Quantidade atualizada para ${produtoNaLista.quantidade}`);
+      } else {
+        this.listaDeCompraAtual.push({ ...produto });
+        console.log(`Adicionei o produto ${produto.nome} à lista de compras`);
+
+      }
+    }
   }
+
 
 }

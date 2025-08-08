@@ -4,7 +4,11 @@
   <section class="section-one">
     <div class="section-one-div-one container">
       <h2>Produtos</h2>
-      <button type="button" class="btn btn-outline-dark botao">Ver lista atual</button>
+
+      <button class="btn btn-outline-dark botao" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Ver lista atual</button>
+
+
     </div>
   </section>
 
@@ -19,7 +23,7 @@
             <div class="quantidade">
               <i class="bi bi-dash-circle-fill" (click)="removerUm(produto.nome)"></i>
               <p class="card-text">{{ produto.quantidade }}</p>
-              <i class="bi bi-plus-circle-fill" (click)="removerUm(produto.nome)"></i>
+              <i class="bi bi-plus-circle-fill" (click)="adicionarUm(produto.nome)"></i>
             </div>
             <div>
               <button type="button" class="btn btn-outline-dark botao"
@@ -34,3 +38,17 @@
 
 </main>
 <app-footer></app-footer>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+  aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Sua lista de compra atual</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    @for (produto of listaDeCompraAtual; track produto){
+    <p>{{produto.nome}}</p>
+    <p>{{produto.quantidade}}</p>
+    }
+  </div>
+</div>
