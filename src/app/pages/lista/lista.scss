@@ -36,6 +36,12 @@
       color: var(--cor-fonte);
       box-sizing: border-box;
 
+      img {
+        width: 207px;
+        height: 207px;
+        object-fit: cover;
+      }
+
       .card-selecao {
         display: flex;
         justify-content: space-between;

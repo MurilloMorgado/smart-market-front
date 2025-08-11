@@ -81,7 +81,7 @@ export class Lista implements OnInit {
 
     // Adicionar produtos
     let y = 40;  // Posição inicial
-    this.listaDeProdutos.forEach(produto => {
+    this.listaDeCompraAtual.forEach(produto => {
       doc.text(produto.nome, 20, y);
       doc.text(String(produto.quantidade), 150, y);
       y += 10;  // Aumenta o valor de Y para a próxima linha

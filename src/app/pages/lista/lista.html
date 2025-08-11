@@ -17,7 +17,7 @@
       <div class="divisao-card">
         @for (produto of listaDeProdutos; track produto) {
         <div class="card-body">
-          <img src="/black-background.png" class="card-img-top" alt="...">
+          <img src="{{produto.imagem}}" class="card-img-top" alt="...">
           <h5>{{ produto.nome }}</h5>
           <div class="card-selecao">
             <div class="quantidade">
