@@ -1,6 +1,4 @@
-export class Produto {
-  nome!: string;
-  quantidade!: number;
-  imagem!: string;
-  adicionar!: boolean;
+export interface Produto {
+  nome: string;
+  imagem: string;
 }

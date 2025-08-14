@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Footer } from "../../components/footer/footer.component";
 import { Header } from "../../components/header/header.component";
 import { firstValueFrom } from 'rxjs';
-import { Produto } from '../../model/produto';
-import { HttpClient } from '@angular/common/http';
 import { jsPDF } from 'jspdf';
+import { ListaDeCompra } from '../../model/ListaDeCompra';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-lista',
@@ -15,8 +15,8 @@ import { jsPDF } from 'jspdf';
 })
 export class Lista implements OnInit {
 
-  listaDeProdutos: Produto[] = [];
-  listaDeCompraAtual: Produto[] = [];
+  listaDeProdutos: ListaDeCompra[] = [];
+  listaDeCompraAtual: ListaDeCompra[] = [];
 
   constructor(private http: HttpClient) { }
 
@@ -31,7 +31,7 @@ export class Lista implements OnInit {
 
   async carregarListaDeProdutos() {
     try {
-      this.listaDeProdutos = await firstValueFrom(this.http.get<Produto[]>('data/listaDeProduto.json'));
+      this.listaDeProdutos = await firstValueFrom(this.http.get<ListaDeCompra[]>('data/listaDeProduto.json'));
       console.log(this.listaDeProdutos);
     } catch (error) {
       console.log("Não foi possivel carregar a lista de produtos", error);

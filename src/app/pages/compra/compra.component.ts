@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Footer } from "../../components/footer/footer.component";
 import { Header } from "../../components/header/header.component";
 import { ComparativoPreco } from '../../model/comparativoPrecos';
-import { Produto } from '../../model/produto';
+import { ListaDeCompra } from '../../model/ListaDeCompra';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
+import { Produto } from '../../model/produto';
 
 @Component({
   selector: 'app-compra',
@@ -16,7 +17,7 @@ import { firstValueFrom } from 'rxjs';
 export class Compra implements OnInit {
 
   comparativoPrecos: ComparativoPreco[] = [];
-  listaDeCompraAtual: Produto[] = [];
+  listaDeCompraAtual: ListaDeCompra[] = [];
   produto: Produto[] = [];
 
   constructor(private http: HttpClient) { }
