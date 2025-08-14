@@ -67,7 +67,11 @@
       color: var(--cor-fonte);
       box-sizing: border-box;
 
-      img {}
+      img {
+        width: 207;
+        height: 207;
+        object-fit: cover;
+      }
     }
 
   }

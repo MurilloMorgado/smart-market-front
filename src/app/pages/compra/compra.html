@@ -1,6 +1,53 @@
 <app-header></app-header>
 <main>
-  <p>compra works!</p>
+
+  <section class="container section-one">
+    <h1>Comparador de preço</h1>
+    <p>Aqui voce vai poder comparar sua ultima compra realizada com a compra que está realziando atualmente e o valor do
+      produto mais barato já comprado</p>
+  </section>
+
+  <section class="container section-otwo">
+    <div>
+
+      <div class="tabela-scroll">
+        <table class="table table-hover">
+
+          <thead>
+            <tr>
+              <th scope="col">Produto</th>
+              <th scope="col">Nome</th>
+              <th scope="col">supermercado</th>
+              <th scope="col">Ultima compra</th>
+              <th scope="col">Compra mais barata</th>
+              <th scope="col">Compra atual</th>
+              <th scope="col">Diferença</th>
+              <th scope="col">Quantidade</th>
+            </tr>
+          </thead>
+
+          <tbody class="tabela-corpo">
+            @for (comparativo of comparativoPrecos; track comparativo) {
+            <tr>
+              <td>{{comparativo.produto?.imagem}}</td>
+              <td>{{comparativo.produto?.nome}}</td>
+              <td>{{comparativo.ultimaCompra?.supermercado}}</td>
+              <td>{{comparativo.ultimaCompra?.preco}}</td>
+              <td>{{comparativo.compraMaisBarata?.supermercado}}</td>
+              <td>{{comparativo.compraMaisBarata?.preco}}</td>
+              <td>{{comparativo.compraAtual?.supermercado}}</td>
+              <td>{{comparativo.compraAtual?.preco}}</td>
+              <td>{{comparativo.diferenca}}</td>
+              <td>{{comparativo.quantidade}}</td>
+            </tr>
+            }
+          </tbody>
+
+        </table>
+      </div>
+
+    </div>
+  </section>
 
 </main>
 <app-footer></app-footer>

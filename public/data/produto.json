@@ -1,0 +1,22 @@
+[
+  { "nome": "Arroz", "imagem": "arroz.jpeg" },
+  { "nome": "Feijão", "imagem": "feijao.jpeg" },
+  { "nome": "Macarrão", "imagem": "macarrao.jpeg" },
+  { "nome": "Óleo de soja", "imagem": "oleo.jpeg" },
+  { "nome": "Açúcar", "imagem": "acucar.jpg" },
+  { "nome": "Sal", "imagem": "sal.jpg" },
+  { "nome": "Farinha de trigo", "imagem": "farinhaDeTrigo.jpg" },
+  { "nome": "Café", "imagem": "cafe.jpg" },
+  { "nome": "Leite", "imagem": "leite.jpg" },
+  { "nome": "Margarina", "imagem": "margarina.jpg" },
+  { "nome": "Detergente", "imagem": "detergente.jpeg" },
+  { "nome": "Sabão em pó", "imagem": "sabaoEmPo.jpg" },
+  { "nome": "Papel higiênico", "imagem": "papelHigienico.png" },
+  { "nome": "Escova de dentes", "imagem": "black-background.png" },
+  { "nome": "Shampoo", "imagem": "shampoo.png" },
+  { "nome": "Condicionador", "imagem": "black-background.png" },
+  { "nome": "Frango congelado", "imagem": "black-background.png" },
+  { "nome": "Carne bovina", "imagem": "black-background.png" },
+  { "nome": "Ovos", "imagem": "ovo.jpg" },
+  { "nome": "Queijo", "imagem": "queijo.png" }
+]

@@ -1,22 +1,27 @@
 [
   {
-    "nome": "Requeijão",
+    "nome": "Macarraão",
+    "imagem": "macarrao.jpeg",
     "valor": "R$ 5.00"
   },
   {
     "nome": "Queijo",
+    "imagem": "queijo.png",
     "valor": "R$ 5.00"
   },
   {
     "nome": "Feijão",
+    "imagem": "feijao.jpeg",
     "valor": "R$ 5.00"
   },
   {
     "nome": "Arroz",
+    "imagem": "arroz.jpeg",
     "valor": "R$ 5.00"
   },
   {
-    "nome": "Presunto",
+    "nome": "Ovos",
+    "imagem": "ovo.jpg",
     "valor": "R$ 5.00"
   }
 ]

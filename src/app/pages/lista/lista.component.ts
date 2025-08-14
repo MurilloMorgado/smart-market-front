@@ -22,6 +22,11 @@ export class Lista implements OnInit {
 
   ngOnInit(): void {
     this.carregarListaDeProdutos();
+
+    const cache = localStorage.getItem('minhaLista');
+    if (cache) {
+      this.listaDeCompraAtual = JSON.parse(cache);
+    }
   }
 
   async carregarListaDeProdutos() {
@@ -91,4 +96,8 @@ export class Lista implements OnInit {
     doc.save('lista_de_produtos.pdf');
   }
 
+  salvarLista() {
+    console.log(this.listaDeCompraAtual);
+    localStorage.setItem('minhaLista', JSON.stringify(this.listaDeCompraAtual));
+  }
 }
