@@ -50,8 +50,19 @@ export class Compra implements OnInit {
     }
   }
 
-  comprarPreco(): void {
+  comparPreco(): void {
 
+    const historicoCompras = [
+      { produto: "Arroz 5kg", supermercado: "Supermercado B", preco: 27.00, data: "2025-06-10" },
+      { produto: "Arroz 5kg", supermercado: "Supermercado C", preco: 25.50, data: "2025-05-10" },
+      { produto: "Feijão", supermercado: "Supermercado A", preco: 8.00, data: "2025-06-10" }
+    ];
+
+    // const comparativo = new ComparativoPreco(
+    //   this.listaDeCompraAtual[0],
+    //   this.produto[0],
+    //   historicoCompras
+    // );
 
   }
 
