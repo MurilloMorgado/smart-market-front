@@ -22,14 +22,15 @@ export class Compra implements OnInit {
 
   constructor(private http: HttpClient) { }
 
-  ngOnInit(): void {
-    this.buscarProdutos();
-    this.buscarHistorico();
-
+  async ngOnInit(): Promise<void> {
     const cache = localStorage.getItem('minhaLista');
     if (cache) {
       this.listaDeCompraAtual = JSON.parse(cache);
     }
+     // this.buscarProdutos();
+    // this.buscarHistorico();
+    this.comparPreco();
+
   }
 
   async buscarProdutos(): Promise<void> {
@@ -51,20 +52,43 @@ export class Compra implements OnInit {
     }
   }
 
-  comparPreco(): void {
-
+  async comparPreco(): Promise<void> {
     const historicoCompras = [
-      { produto: "Arroz 5kg", supermercado: "Supermercado B", preco: 27.00, data: "2025-06-10" },
-      { produto: "Arroz 5kg", supermercado: "Supermercado C", preco: 25.50, data: "2025-05-10" },
-      { produto: "Feijão", supermercado: "Supermercado A", preco: 8.00, data: "2025-06-10" }
+      { produto: "Feijão", supermercado: "Supermercado B", preco: 27.00, data: "2025-06-10" },
+      { produto: "Feijão", supermercado: "Supermercado B", preco: 26.00, data: "2025-05-10" },
+      { produto: "Arroz", supermercado: "Supermercado C", preco: 25.50, data: "2025-05-10" },
+      { produto: "Miojo", supermercado: "Supermercado A", preco: 8.00, data: "2025-06-10" }
     ];
 
-    // const comparativo = new ComparativoPreco(
-    //   this.listaDeCompraAtual[0],
-    //   this.produto[0],
-    //   historicoCompras
-    // );
+    this.comparativoPrecos = this.listaDeCompraAtual.map(item => {
+      const nomeProduto = item.nome;
+      const produtoInfo = item.imagem;
+      console.log("nomeProduto : " + nomeProduto + "/ imagem : " + produtoInfo);
+      
 
+      const comprasDoProduto = historicoCompras
+        .filter(c => c.produto === nomeProduto)
+        .sort((a, b) => new Date(b.data).getTime() - new Date(a.data).getTime());
+
+      const ultimaCompra = comprasDoProduto[0];
+      const compraMaisBarata = comprasDoProduto.reduce((maisBarata, atual) =>
+        atual.preco < maisBarata.preco ? atual : maisBarata, comprasDoProduto[0]);
+
+      const compraAtualPreco = 0;
+      const diferenca = 0;
+
+      return new ComparativoPreco(
+        nomeProduto,
+        produtoInfo,
+        ultimaCompra?.preco,
+        compraMaisBarata?.preco,
+        compraAtualPreco,
+        diferenca,
+        item.quantidade
+      );
+    });
+    console.log(this.comparativoPrecos);
+    
   }
 
 }

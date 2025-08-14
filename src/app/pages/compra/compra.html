@@ -17,7 +17,6 @@
             <tr>
               <th scope="col">Produto</th>
               <th scope="col">Nome</th>
-              <th scope="col">supermercado</th>
               <th scope="col">Ultima compra</th>
               <th scope="col">Compra mais barata</th>
               <th scope="col">Compra atual</th>
@@ -27,16 +26,13 @@
           </thead>
 
           <tbody class="tabela-corpo">
-            @for (comparativo of comparativoPrecos; track comparativo) {
+            @for (comparativo of comparativoPrecos; track comparativo.nomeProduto) {
             <tr>
-              <td>{{comparativo.produto?.imagem}}</td>
-              <td>{{comparativo.produto?.nome}}</td>
-              <td>{{comparativo.ultimaCompra?.supermercado}}</td>
-              <td>{{comparativo.ultimaCompra?.preco}}</td>
-              <td>{{comparativo.compraMaisBarata?.supermercado}}</td>
-              <td>{{comparativo.compraMaisBarata?.preco}}</td>
-              <td>{{comparativo.compraAtual?.supermercado}}</td>
-              <td>{{comparativo.compraAtual?.preco}}</td>
+              <td><img src="{{comparativo.imagemProduto}}" alt="" style="width: 100px;"></td>
+              <td>{{comparativo.nomeProduto}}</td>
+              <td>{{comparativo.ultimaCompraPreco}}</td>
+              <td>{{comparativo.compraMaisBarataPreco}}</td>
+              <td>{{comparativo.compraAtualPreco}}</td>
               <td>{{comparativo.diferenca}}</td>
               <td>{{comparativo.quantidade}}</td>
             </tr>
